@@ -1,0 +1,40 @@
+# Live vaults and notes must never be tracked here
+.obsidian/
+**/.obsidian/
+[vV]ault*/
+[nN]otes/
+Daily/
+QuickNote/
+TaskNotes/
+attachments/
+# Plugin account data and machine state
+**/data.json
+**/workspace*.json
+**/bookmarks.json
+**/graph.json
+**/app.json
+**/core-plugins.json
+**/cache/
+**/.cache/
+**/IndexedDB/
+**/logs/
+**/node_modules/
+# Local overrides, credentials, exports and backups
+local/
+private/
+*.local.*
+*secret*
+*credential*
+*token*
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.log
+*.bak
+*.zip
+*.sqlite*
+*.db
+.DS_Store

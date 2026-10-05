@@ -1,0 +1,9 @@
+{
+  "tasksFolder": "TaskNotes/Tasks",
+  "archiveFolder": "TaskNotes/Archive",
+  "enableAPI": false,
+  "enableMCP": false,
+  "enableGoogleCalendar": false,
+  "enableMicrosoftCalendar": false,
+  "webhooks": []
+}

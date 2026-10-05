@@ -1,0 +1,9 @@
+{
+  "id": "pamin-auto-note-title",
+  "name": "Pamin Auto Note Title",
+  "version": "1.0.0",
+  "minAppVersion": "1.0.0",
+  "description": "Rename opted-in notes after typing pauses, using the date and first eight words.",
+  "author": "Pamin",
+  "isDesktopOnly": false
+}
