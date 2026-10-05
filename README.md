@@ -9,6 +9,7 @@ Portable configuration and blank templates for separate personal and work vaults
 - `plugin-config-examples/`: reviewed Templater and Custom Sort examples, plus a minimal TaskNotes example with API, MCP and calendar connections disabled. No raw TaskNotes settings are copied.
 - `local-plugins/pamin-auto-note-title/`: the local plugin for automatic titles after typing.
 - `plugins-list.md`: plugin IDs and source versions.
+- `sortspec.md`: the reviewed root Custom Sort specification; copy it to the root of the destination vault.
 
 ## Set up another Mac
 
@@ -26,6 +27,12 @@ cd obsidian-setup
 5. Close Obsidian. For a freshly installed plugin, copy its matching example to `.obsidian/plugins/<plugin-id>/data.json`. For an existing setup, review and merge values manually so local settings are preserved. Examples are partial settings; plugins may add defaults. Reopen Obsidian and verify each plugin's settings.
 6. Templater uses `Template/`, with folder templates for `QuickNote/` and `Daily/`. Its stale hotkey entry was removed. Keep shell commands and startup scripts unconfigured unless separately reviewed.
 7. Optionally copy `local-plugins/pamin-auto-note-title/` to `.obsidian/plugins/pamin-auto-note-title/`, review its code, then enable it under Community plugins. Restart Obsidian. In a disposable note made from Notes Template, type a sentence and wait about two seconds: the title should become `YYYY-MM-DD {first 8 words}`. The body stays blank until you type; text after `## Related` is excluded. Only notes with `auto-title: true` are eligible. Remove that flag to stop renaming. Opening words edited later can rename the note again. A conflicting title is skipped. Unit checks previously passed, but this exported copy has not been tested live on the destination Mac.
+
+### Custom Sort
+
+Copy `sortspec.md` to the root of your destination vault. Install **Custom File Explorer sorting** (`custom-sort`), close Obsidian, then apply `plugin-config-examples/custom-sort.json` as `.obsidian/plugins/custom-sort/data.json` (merge manually for an existing setup). These settings match the reviewed source configuration: sorting is active (`suspended: false`), automatic bookmarks integration is enabled, and the bookmark group used as the ordering reference is named `sortspec`. `additionalSortspecFile` is empty; no machine-specific path is required.
+
+The root specification targets `/*`, places bookmarked items in bookmark order, and sorts the remaining items in descending alphabetical order (`> a-z`). This is lexical sorting, so numbered names do not use natural numeric order. Enable the core Bookmarks plugin and create a `sortspec` bookmark group locally if you want custom bookmark ordering. Personal bookmarks are not included. Restart Obsidian and check the work vault's file explorer; destination behavior has not been tested live.
 
 Do not point a work vault at the personal vault or enable personal note/calendar sync on it. Configure accounts individually on each machine; never commit the resulting `data.json` files. Avoid symlinking live plugin settings into this repository because plugins write account data into them.
 
