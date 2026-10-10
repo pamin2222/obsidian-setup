@@ -16,6 +16,10 @@
     {
       "folder": "Daily",
       "template": "Template/Daily Template.md"
+    },
+    {
+      "folder": "Notebook",
+      "template": "Template/Notes Template.md"
     }
   ],
   "file_templates": [],

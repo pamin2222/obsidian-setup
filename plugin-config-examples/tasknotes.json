@@ -1,6 +1,12 @@
 {
   "tasksFolder": "TaskNotes/Tasks",
   "archiveFolder": "TaskNotes/Archive",
+  "taskTag": "task",
+  "taskIdentificationMethod": "tag",
+  "taskPropertyName": "",
+  "taskPropertyValue": "",
+  "defaultTaskPriority": "normal",
+  "defaultTaskStatus": "open",
   "enableAPI": false,
   "enableMCP": false,
   "enableGoogleCalendar": false,
